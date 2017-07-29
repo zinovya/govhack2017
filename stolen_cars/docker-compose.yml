@@ -1,0 +1,11 @@
+version: "2"
+services:
+    stolen_vehicle_backend:
+        ports:
+        - "80:4443"
+        volumes:
+          - ./db:/db
+        build: backend
+        entrypoint:
+          - python
+          - /main.py
