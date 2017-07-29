@@ -20,6 +20,6 @@ class AlprCaller():
 
         return text
 
-A = AlprCaller('eu','aryan1.')
-txt = A.get_license_plate_text()
-print(txt)
+# A = AlprCaller('eu','aryan1.')
+# txt = A.get_license_plate_text()
+# print(txt)
