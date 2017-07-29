@@ -22,6 +22,6 @@ class AlprCaller():
 
         return text
 
-A = AlprCaller('eu','das638.jpeg')
-txt = A.get_license_plate_text()
-print(txt)
+# A = AlprCaller('eu','das638.jpeg')
+# txt = A.get_license_plate_text()
+# print(txt)
