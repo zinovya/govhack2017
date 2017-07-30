@@ -1,0 +1,32 @@
+In New Zealand alone more than 3000 vehicles are currently reported as being stolen.
+Identifying data for stolen cars is currently made public through through the police.
+Handheld devices nowadays feature the computational capababilities, as well as optical
+sensors, geo-location and internet connectivity.
+Our idea is to crowd-source the localization of stolen vehicles with smartphone devices.
+This way the police will be able to search for stolen vehicles with the help of citizens.
+
+Our working prototype takes in video footage and uses a state-of-the art real-time deep
+learning algorithm to detecti license plates and runs character recognition on it.
+We query that data against the current police dataset and inform the police about a
+positive matcha gainst the current police dataset and inform the police about a
+positive match.
+
+Our team is called Woo-Hoogle and consists of ...
+
+Our application queries the police database, downloads die information in the given csv
+format and stores the data on stolen vehicles on the users device.
+While driving, the camera is used to run a two-stage algorithm to read license plates.
+The first stage utilizes the tiny yolo / darknet framework, which is a deep learning
+convolutional neural network, that we custom trained with a self-annotated dataset,
+based on dash-cam footage. This stage creates bounding boxes for possible number plate
+positions.
+The second stage utilizes OpenAPNR to run OCR on the detection image sections and reads
+the text on the number plate. The resulting text is queried against the locally stored
+database of stolen vehicles and sends the license plate and current GPS coordinates
+to the backend, which can visualize the geo-location data via the HERE api.
+Our software was build in Python and C++ with the help of libraries like OpenCV, darknet,
+OpenANPR and cuda.
+
+The prototype we created can be run in real-time on a 2012 laptop with ad discrete nvidia
+gpu.
+In the future we'd like to port the application to current smartphone devices and 
